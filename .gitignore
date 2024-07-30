@@ -1,0 +1,6 @@
+*.o
+*/*.o
+ex00/scalar
+ex01/serialization
+ex02/realtype
+.vscode
