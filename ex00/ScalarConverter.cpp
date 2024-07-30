@@ -63,7 +63,7 @@ void ScalarConverter::convert(std::string s)
 		else
 			std::cout << "int: " << n << std::endl;
 	}
-	std::cout << "float: " << f << std::endl;
+	std::cout << "float: " << f << (std::isnan(d) || std::isinf(d) ? "f" : "") << std::endl;
 	std::cout << "double: " << d << std::endl;
 }
 

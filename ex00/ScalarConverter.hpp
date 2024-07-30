@@ -5,6 +5,7 @@
 # include <string>
 # include <cstdlib>
 # include <ctype.h>
+# include <cmath>
 
 class ScalarConverter
 {
