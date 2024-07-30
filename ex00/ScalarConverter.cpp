@@ -49,12 +49,20 @@ void ScalarConverter::convert(std::string s)
 		std::cout << "char: '" << c << "'" << std::endl;
 	else
 	{
-		if (c == 0)
+		if (c == 0 && s.find("0", 0) == s.npos)
 			std::cout << "char: impossible" << std::endl;
 		else
 			std::cout << "char: Not displayable" << std::endl;
 	}
-	std::cout << "int: " << n << std::endl;
+	if (n == -2147483647-1 && s != "-2147483648")
+		std::cout << "int: impossible" << std::endl;
+	else
+	{
+		if (n == 0 && s.find("0", 0) > 1)
+			std::cout << "int: impossible" << std::endl;
+		else
+			std::cout << "int: " << n << std::endl;
+	}
 	std::cout << "float: " << f << std::endl;
 	std::cout << "double: " << d << std::endl;
 }
